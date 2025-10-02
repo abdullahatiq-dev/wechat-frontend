@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api";
+import Layout from "../components/Layout";
 
 export default function RoomListPage() {
   const [rooms, setRooms] = useState([]);
@@ -35,6 +36,7 @@ export default function RoomListPage() {
   };
 
   return (
+    <Layout>
     <div className="max-w-md mx-auto mt-10 border rounded shadow p-4">
       <h2 className="text-xl font-bold mb-4">Chat Rooms</h2>
 
@@ -63,5 +65,6 @@ export default function RoomListPage() {
         ))}
       </ul>
     </div>
+    </Layout>
   );
 }
